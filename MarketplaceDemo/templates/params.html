@@ -1,0 +1,54 @@
+<html>
+<head>
+  <title>No One Should See This Title</title>
+</head>
+<body>
+
+<h1>This page in the marketplace app displays parameters passed in</h1>
+
+<p><a href="home">Return to main page</a></p>
+
+<p>
+Params passed in via GET:
+<table>
+{% for key, value in GET.items %}
+  <tr>
+    <td>{{ key }}</td>
+    <td>{{ value }}</td>
+  </tr>
+{% endfor %}
+<table>
+</p>
+
+<hr>
+
+<p>
+Params passed in via POST:
+<table>
+{% for key, value in POST.items %}
+  <tr>
+    <td>{{ key }}</td>
+    <td>{{ value }}</td>
+  </tr>
+{% endfor %}
+<table>
+</p>
+
+<hr>
+
+<p>
+Django's META information:
+<table>
+{% for key, value in META.items %}
+  <tr>
+    <td>{{ key }}</td>
+    <td>{{ value }}</td>
+  </tr>
+{% endfor %}
+<table>
+</p>
+
+<a href="home">Return to main page</a>
+</ul>
+</body>
+</html>

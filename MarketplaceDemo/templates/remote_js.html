@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title>No One Should See This Title</title>
+</head>
+<body>
+<script type="text/javascript"  src="//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+
+<p class="neat"><strong>Congratulations!</strong> If the start of this line is "I've been changed" then the JavaScript ran onload + used jQuery.<strong><a href="http://docs.jquery.com/">documentation</a></strong> </p>
+
+<p>
+ <a id="ajax_launcher" href="/">Run Some Ajax</a>
+</p>
+
+<p class="replace">This text should get replaced via ajax</p>
+
+<script type="text/javascript">  
+  $(document).ready(function() {   
+  $("p.neat strong").html("I've been changed");
+  $("a#ajax_launcher").click(function() { $.get('ajax', function(data) {
+     $("p.replace").html(data);
+   }); return false;});
+
+  });
+</script>
+</body>
+</html>

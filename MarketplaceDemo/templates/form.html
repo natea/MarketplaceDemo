@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>No One Should See This Title</title>
+</head>
+<body>
+
+<h1>I am a mighty form page</h1>
+
+<form action="form" method="POST">
+{% csrf_token %}
+Name please: <input type="text" name="name">
+
+<br>
+
+<input type="submit" value="Let's Do This">
+</form>
+</body>
+</html>
