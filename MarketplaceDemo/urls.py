@@ -21,7 +21,7 @@ from django.views.generic.simple import direct_to_template
 # from django.contrib import admin
 # admin.autodiscover()
 
-import marketplacetest.views as views
+import views
 
 urlpatterns = patterns(
     '',
